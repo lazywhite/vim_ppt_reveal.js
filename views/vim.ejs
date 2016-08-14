@@ -1,0 +1,227 @@
+<div class="reveal">
+
+	<!-- Used to fade in a background when a specific slide state is reached -->
+	<div class="state-background"></div>
+	
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+		<section>
+			<h1>Reveal.js</h1>
+			<h3 class="inverted">CSS 3D Presentations</h3>
+			<script>
+				// Delicously hacky. Look away.
+				if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+			</script>
+            <p style="text-decoration:underline">
+                <a href="http://lab.hakim.se/reveal-js/#/">http://lab.hakim.se/reveal-js/#/</a>
+            </p>
+		</section>
+		
+		<section>
+			<h2>VIM</h2>
+            <p><a href="http://www.vim.org/">Vi Improved</a></p>
+            <ul>
+                <li>Installtion</li>
+                <li>Usage
+                    <ol>
+                        <li>Mode</li>
+                        <li>Buffer</li>
+                        <li>Tab</li>
+                        <li>Window</li>
+                        <li>Macro</li>
+                        <li>Plugin</li>
+                    </ol>
+                </li>
+            </ul>
+
+		</section>
+		<section>
+            <h2>Installtion</h2>
+            <ul>
+                <li>Source code</li>
+                <li>Package
+                    <ul>
+                        <li>apt-get install vim</li>
+                        <li>yum install vim-enhanced</li>
+                        <li>vim-7.4.msi</li>
+                    </ul>
+                </li>
+            </ul>
+		</section>
+
+		<section>
+		    <section>
+        <h2>Usage</h2>
+<pre>
+<code>
+usage: vim [arguments] [file ..]       edit specified file(s)
+   or: vim [arguments] -               read text from stdin
+   or: vim [arguments] -t tag          edit file where tag is defined
+   or: vim [arguments] -q [errorfile]  edit file with first error
+</code>
+</pre>                    
+		    </section>
+		    <section>
+        		<img class="image"  src="images/vim-snap-03.png">
+		    </section>
+		</section>
+
+		
+		<!-- Example of nested vertical slides -->
+		<section>
+			<section>
+				<h2>Mode</h2>
+				<h3>
+                   Normal Mode (正常模式)
+				</h3>
+                    <pre>
+            <code>
+            j: 下一行
+            k: 上一行
+            h: 左一字
+            l: 右一字
+            ^+f: 向下翻一页
+            ^+b: 向上翻一页
+            ^+u: 向上翻半页
+            ^+d: 向下翻半页
+            </code>
+                    </pre>
+			</section>
+			<section>
+				<h2>Mode</h2>
+				<h3>
+                    Insert Mode (插入模式)
+				</h3>
+                <p> Free typing </p>
+			</section>
+			<section>
+				<h2>Mode</h2>
+				<h3>
+                   Visual Mode (可视模式)
+				</h3>
+                <pre>
+                <code>
+        v
+        V
+        ^+v
+                </code>
+                </pre>
+			</section>
+			<section>
+				<h2>Mode</h2>
+				<h3>
+                   Command Mode (命令模式)
+				</h3>
+                <pre>
+                <code>
+        :wq
+        :qa
+        :set nu
+        </code>
+        </pre>
+			</section>
+		</section>
+
+		<section>
+            <section>
+			<h2>Buffer</h2>
+            <pre>
+            <code>
+    prefix: b
+    create: open file in current buffer
+    list :ls
+    next :bn
+    previouse :bp
+    close :bw
+    goto <n> :b[space][index]
+            </code>
+            </pre>
+            </section>
+            <section>
+    <img src="images/vim-snap-02.png"></img>
+            </section>
+		</section>
+
+		<section>
+		    <section>
+			<h2>Tab</h2>
+            <pre>
+            <code>
+    prefix: tab
+    list: tabs
+    create: tabnew | tabedit <file>
+    quick switch: gt
+    close: tabclose
+    switch to specified tab:  [index]gt 
+            </code>
+            </pre>
+	    	</section>
+            <section>
+                <img src="images/vim-snap-04.png"</img>
+            </section>
+		</section>
+
+		<section>
+		    <section>
+			<h2>Window</h2>
+            <pre>
+            <code>
+    prefix: ^+w
+    create: vs|sp [file]
+    quickSwitch: [prefix] + w [twice]
+    normal: [prefix] + [hjkl]
+    close:  wq
+            </code>
+            </pre>
+    		</section>
+    		<section>
+                <img src="images/vim-snap-05.png"</img>
+    		</section>
+		</section>
+
+		<section>
+			<h2>Macro</h2>
+            <pre>
+            <code>
+    start: q [letter]
+    record: anything
+    quit: q
+    apply: @@, @[letter]
+    multi-apply: [number]@[letter]
+            </code>
+            </pre>
+		</section>
+		<section data-state="soothe">
+            <h2>Plugin</h2>
+            <h3><a href="https://github.com/VundleVim/Vundle.vim">Vundle</a> <h3>
+             <ol>
+                 <li class="fragment">Toggle comment</li>
+                 <li class="fragment">YCM</li>
+                 <li class="fragment">NerdTree</li>
+             </ol>
+		</section>
+		<section data-state="blackout">
+            <h2>Bye!</h2>
+            <p>Thank you for your time</p>
+		</section>
+
+
+	</div>
+
+	<!-- The navigational controls UI -->
+	<aside class="controls">
+		<a class="left" href="#">&#x25C4;</a>
+		<a class="right" href="#">&#x25BA;</a>
+		<a class="up" href="#">&#x25B2;</a>
+		<a class="down" href="#">&#x25BC;</a>
+	</aside>
+
+	<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+	<div class="progress"><span></span></div>
+	
+</div>
+
+
+
+
+
